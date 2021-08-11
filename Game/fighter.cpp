@@ -4,7 +4,7 @@
 
 Network* Fighter::NetworkController = nullptr;
 
-Fighter::Fighter( FighterController Controls, std::string Config, Arena* FightArena, bool AlternativeSprites )
+Fighter::Fighter( FighterController Controls, std::string Config, Arena* FightArena, bool AlternativeSprites ): currentFaceLeft(false)
 {
 #ifdef WRITE_LOG
 	fprintf( FRAMEWORK->LogFile, "Fighter: Constructing %s\n", Config.c_str() );
